@@ -1,0 +1,67 @@
+:root {
+    --ink: #14202e;
+    --paper: #f3f6f8;
+    --sea: #0e7c86;
+    --sea-dark: #0a5c64;
+    --light: #e8eef2;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.7;
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
+
+/* Intestazione */
+.site-header {
+    background: linear-gradient(rgba(20,32,46,.68), rgba(20,32,46,.9)), url("soleeeee.jpeg") center / cover, var(--ink);
+    color: var(--light);
+    padding: 6rem 0 4rem;
+}
+.site-header .lead { max-width: 40ch; }
+.site-header h1 { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: .5rem; }
+.site-header p { margin: 0; color: #b9c7d3; }
+
+.site-nav { background: var(--sea-dark); position: sticky; top: 0; z-index: 10; }
+.site-nav a.active { background: rgba(255,255,255,.22); font-weight: 600; }
+.site-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: .75rem 1rem;
+    display: inline-block;
+}
+.site-nav a:hover, .site-nav a:focus-visible { background: rgba(255,255,255,.15); }
+
+/* Contenuto */
+main section { padding: 3rem 0 1rem; scroll-margin-top: 3.5rem; }
+main h2 { font-size: 1.8rem; margin-bottom: 1.25rem; }
+.testo { max-width: 65ch; }
+
+/* Foto */
+figure { margin: 0; }
+figure img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+.foto-btn { border: 0; padding: 0; background: none; width: 100%; cursor: zoom-in; border-radius: .5rem; }
+.foto-btn img { transition: transform .2s; }
+.foto-btn:hover img { transform: scale(1.02); }
+.card h3 { font-size: 1.25rem; }
+figcaption { font-size: .95rem; color: #4a5866; margin-top: .5rem; }
+
+/* Contatti */
+.list-group-item { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+
+/* Piè di pagina */
+footer { background: var(--ink); color: #b9c7d3; padding: 2rem 0; margin-top: 4rem; }
+footer a { color: #fff; }
+
+a:focus-visible, .btn:focus-visible { outline: 3px solid #f5a505; outline-offset: 2px; }
